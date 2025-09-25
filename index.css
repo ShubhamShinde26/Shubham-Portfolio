@@ -1,0 +1,402 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Custom Navbar for Top-Left Positioning */
+.top-left-navbar {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+.top-left-navbar .navbar-brand {
+    margin-right: 2rem;
+}
+/* Updated rule for the navbar logo */
+.top-left-navbar .navbar-brand img {
+    height: 40px; /* You can adjust this size */
+}
+.top-left-navbar .navbar-nav {
+    flex-direction: row;
+    gap: 2rem;
+    margin-left: 0 !important;
+}
+.top-left-navbar .nav-link {
+    font-size: 1.1rem;
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.top-left-navbar .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+/* Hero Section with no top padding, as the navbar is absolute */
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('Images/2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+}
+#home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+#home .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero text paragraph container */
+.hero-text {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+/* Hero Buttons */
+.hero-btns {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Resume Button */
+.resume-btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    transition: 0.3s ease;
+}
+.resume-btn:hover {
+    background-color: #ffc107;
+    color: black;
+}
+
+/* Icon Buttons */
+.icon-btn {
+    color: white;
+    font-size: 1.6rem;
+    transition: 0.3s ease;
+}
+.icon-btn:hover {
+    color: #ffc107;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* About Section Layout */
+#about {
+    background-image: url('Images/about-me-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    z-index: 1;
+}
+.about-container {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.image-box {
+    width: 350px;
+    height: 450px;
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #1a1a1a;
+    /* Optional: Add a class to the image-box for specific styling of the image itself */
+}
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* To match the container's border-radius */
+}
+.resume-box {
+    display: flex;
+    justify-content: center;
+}
+
+.info-box {
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    text-align: left;
+}
+.info-box .box-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+    color: #ffc107;
+}
+.info-box .box-text {
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+.game-design-box {
+    width: 450px;
+    height: auto;
+    min-height: 250px;
+}
+.development-box, .level-design-box {
+    width: 450px;
+    height: auto;
+    min-height: 180px;
+}
+.about-right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.right-side-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Skills Section Styling */
+.skills-box {
+    width: 350px;
+    height: auto;
+    min-height: 200px;
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 1.5rem;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.skills-box .skills-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffc107;
+    margin-bottom: 1rem;
+}
+.skills-box .logo-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+.skills-box .skill-logo {
+    width: 80px;
+    height: 80px;
+    background-color: #444;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #fff;
+    border: 1px solid #777;
+    overflow: visible; /* Changed to visible to allow pseudo-element to appear outside */
+    position: relative; /* Essential for positioning the ::after pseudo-element */
+    transition: transform 0.3s ease;
+}
+.skills-box .skill-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Pop-up effect on hover */
+.skills-box .skill-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Tooltip-like effect for skill names (as per the reference image) */
+.skills-box .skill-logo::after {
+    content: attr(data-skill-name); /* Pulls the name from the HTML attribute */
+    position: absolute;
+    bottom: -30px; /* Position below the logo, adjust value for spacing */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffc107; /* Background color for the name box */
+    color: #1a1a1a; /* Text color for the name */
+    padding: 3px 8px; /* Padding inside the name box */
+    border-radius: 5px; /* Rounded corners for the name box */
+    white-space: nowrap; /* Prevents text from wrapping */
+    font-size: 0.75rem; /* Smaller font size for the name */
+    font-weight: bold;
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Allows interaction with the logo below it */
+    transition: opacity 0.3s ease, bottom 0.3s ease; /* Smooth transition */
+    z-index: 10; /* Ensures it appears above other elements */
+}
+
+/* Show the skill name on hover */
+.skills-box .skill-logo:hover::after {
+    opacity: 1;
+    bottom: -25px; /* Slight upward movement on hover */
+}
+
+/* Impressive Some of the things I like... section styling */
+#likes {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.likes-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #1a1a1a;
+    border: 2px solid #ffc107;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative; /* Needed for z-index to work */
+    z-index: 2; /* Ensures content is above the overlay */
+}
+.likes-box h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ffc107;
+}
+.likes-box p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+.likes-box ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+.likes-box li {
+    margin-bottom: 0.5rem;
+}
+.likes-box strong {
+    color: #ffc107;
+}
+
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-left, .about-right-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .image-box, .game-design-box, .development-box, .level-design-box {
+        width: 100%;
+        max-width: 350px;
+    }
+    .game-design-box {
+        min-height: 200px;
+    }
+    .development-box, .level-design-box {
+        min-height: 150px;
+    }
+    .right-side-boxes {
+        margin-left: 0;
+    }
+    .likes-box {
+        margin: 0 15px;
+    }
+    .skills-box {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Contact Section Styling */
+#contact {
+    background-image: url('Images/contact.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white; /* Ensure text remains white */
+}
+#contact::before { /* Add an overlay for readability */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    z-index: 1;
+}
+#contact .container { /* Ensure content is above the overlay */
+    position: relative;
+    z-index: 2;
+}
+
+/* New rule for the contact logo image */
+.contact-logo img {
+    height: 80px; /* Adjust this size for the best fit */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    font-style: italic;
+    font-size: 1rem;
+}
